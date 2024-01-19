@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+$main-width: 1240px;
+$main-height: 223px;
+
+.header {
+    width: $main-width;
+    height: $main-height;
+    background: #000;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+    border-radius: 25px;
+
+    &__img {
+        object-fit: cover;
+        opacity: 0.7;
+    }
+
+    &__text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        color: white;
+        font-family: Montserrat;
+        font-size: 48px;
+        text-align: center;   
+    }
+}
