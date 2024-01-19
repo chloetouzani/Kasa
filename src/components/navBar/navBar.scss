@@ -1,0 +1,32 @@
+$main-color: #FF6060;
+
+@mixin navBartext {
+    color: $main-color;
+    font-family: Montserrat;
+    font-size: 24px; 
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 45px auto 50px;
+    width: 90%;
+
+    &__list {
+        display:flex;
+        list-style: none;
+        gap: 30px;
+        @include navBartext;
+
+        &__link {
+    color: $main-color;
+    text-decoration: none;
+    text-align: right;
+    }           
+        & a.active {
+            text-decoration: underline;
+        }
+    }
+    
+}
+
