@@ -1,0 +1,37 @@
+$main-height: 340px;
+$main-width: 340px;
+
+.Cards {
+    display: flex;
+    flex-direction: column;
+    height: $main-height;
+    width: $main-width;
+    margin: 0;
+    object-fit: scale-down;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+
+    &__img {
+        height: $main-height;
+        width: $main-width;
+        object-fit: cover;
+    }
+
+    &__text {
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+        font-family: 'Montserrat';
+        font-size: 18px;
+        display: flex;
+        align-items: self-end;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
+    }
+
+}

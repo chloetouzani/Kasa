@@ -2,7 +2,7 @@ $main-color: #FF6060;
 
 @mixin navBartext {
     color: $main-color;
-    font-family: Montserrat;
+    font-family: 'Montserrat';
     font-size: 24px; 
 }
 
@@ -10,7 +10,7 @@ $main-color: #FF6060;
     display: flex;
     justify-content: space-between;
     margin: 45px auto 50px;
-    width: 90%;
+    width: 1240px;;
 
     &__list {
         display:flex;
