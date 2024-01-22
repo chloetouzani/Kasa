@@ -1,9 +1,10 @@
 import Header from "../../components/header"
+import AboutImg from '../../assets/About-Header.png'
 
 function About() {
     return (
         <div>
-            <Header />
+            <Header src={AboutImg} alt="Montagnes"/>
         </div>
     )
 }

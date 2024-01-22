@@ -1,11 +1,10 @@
-import HomeHeader from '../../assets/Home-Header.png'
 import './style.scss'
 
-function Header() {
+function Header({src, alt, text=""}) {
     return (
         <header className='header'>
-            <img src={HomeHeader} alt="falaises en bord de mer" className='header__img'/>
-            <p className='header__text'>Chez vous, partout et ailleurs</p>
+            <img src={src} alt="alt" className='header__img'/>
+            <p className='header__text'>{text}</p>
         </header>
     )
 }

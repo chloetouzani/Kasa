@@ -1,6 +1,6 @@
 import './style.scss'
 
-function Cards({title, cover}) {
+function Card({title, cover}) {
     return (
         <figure className='Cards'>
             <img className='Cards__img' src={cover} alt={title}/>
@@ -9,4 +9,4 @@ function Cards({title, cover}) {
     )
 }
 
-export default Cards
+export default Card
