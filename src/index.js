@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/'
 import About from './pages/about'
 import NavBar from './components/navBar';
+import Footer from './components/footer';
 import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,6 +17,7 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />}/>
       </Routes>
+      <Footer />
     </Router>
   </React.StrictMode>
 );

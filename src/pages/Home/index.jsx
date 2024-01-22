@@ -5,7 +5,7 @@ import "./style.scss"
 
 function Home() {
     return (
-        <body>²
+        <div>
             <Header />
             <div className="cards-grid">
             {Houses.map((house, index) => (
@@ -15,7 +15,7 @@ function Home() {
             cover={house.cover}/>
             ))}
             </div>
-        </body>
+        </div>
     )
 }
 
