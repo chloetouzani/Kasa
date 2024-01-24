@@ -1,0 +1,10 @@
+.stars {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    font-size: larger;
+
+    &__grey {
+        color: #E3E3E3;
+    }
+}

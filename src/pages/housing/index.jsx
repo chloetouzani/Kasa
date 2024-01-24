@@ -4,6 +4,7 @@ import Houses from "../../datas/logements"
 import "./style.scss"
 import Collapse from "../../components/collapse"
 import Tag from "../../components/tag"
+import Stars from "../../components/stars"
 
 function House() {
     const {id} = useParams()
@@ -11,20 +12,23 @@ function House() {
     return (
         <main className="house">
             <Carousel Pictures={FoundHouse.pictures} alt={FoundHouse.title} />
+
             <section className="house__infos">
                 <div>
                     <h1>{FoundHouse.title}</h1>
                     <p>{FoundHouse.location}</p>
-                    <div>
-                        <Tag TagText={FoundHouse.tags}/>
-                    </div>
+                    <Tag TagText={FoundHouse.tags}/>
                 </div>
+
+                <div className="host-infos">
                 <figure>
                     <img src={FoundHouse.host.picture} alt={FoundHouse.host.name}/>
                     <figcaption>{FoundHouse.host.name}</figcaption>
                 </figure>
-
+                <Stars rating={FoundHouse.rating}/>
+                </div>
             </section>
+
             <div className="house__collapse">
                 <Collapse CollapseTitle="Description" CollapseText={FoundHouse.description}/>
                 <Collapse 

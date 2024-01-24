@@ -4,7 +4,7 @@ function Tag({TagText}) {
     return (
         <ul className="tag">
         {TagText.map((tag) => (
-                <li>{tag}</li>
+                <li key={tag}>{tag}</li>
         ))}
         </ul>
     )
