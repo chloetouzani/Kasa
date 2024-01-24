@@ -38,6 +38,11 @@ $main-height: auto;
         overflow: hidden;
         animation-duration: 3s;
         animation-name: glissement;
+        
+        & li {
+            list-style-type:none;
+            gap: 10px;
+        }
 
         &--open {
             height: $main-height;

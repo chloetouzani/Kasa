@@ -20,7 +20,9 @@ function Collapse({CollapseTitle, CollapseText}) {
                     <FontAwesomeIcon icon={faChevronUp}/> 
                 </div>
             </div>
-            {isOpen && <p className="collapse__text collapse__text--open">{CollapseText}</p>}
+            {isOpen && 
+                (CollapseTitle === 'Equipements' ? <ul className='collapse__text'>{CollapseText.map((text) => (<li key={text}>{text}</li>))}</ul> : <p className="collapse__text collapse__text--open">{CollapseText}</p>)
+            }
         </section>
     )
 }
