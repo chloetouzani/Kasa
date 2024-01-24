@@ -1,0 +1,44 @@
+.house {
+    color: #FF6060;
+    font-family: Montserrat;
+    margin: auto;
+    width: 1240px;
+
+    &__infos {
+        display: flex;
+        justify-content: space-between;
+        
+        & h1{
+        font-size: 36px;
+        margin: 30px 0 0;
+        max-width: 70%;
+        }
+
+        & figure {
+            display: flex;
+            flex-direction:row-reverse;
+            font-size: 18px;
+            margin-top: 24px;
+            
+            & figcaption {
+                max-width: 80px;
+                text-align: end;
+                margin-right: 10px;
+                line-height: 142.6%
+            }
+        }
+
+        & img {
+            height: 64px;
+            width: 64px;
+            object-fit: cover;
+            border-radius: 90px;
+        }
+    }
+
+    &__collapse {
+        display: flex;
+        justify-content: space-between;
+        gap: 76px;
+    }
+}
