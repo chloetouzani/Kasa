@@ -4,7 +4,6 @@ $main-height: auto;
     margin: auto;
     font-family: "Montserrat";
     width: 1023px;
-    background-color: #F6F6F6;
     margin-bottom: 15px;
     margin-top:30px;
 
@@ -55,12 +54,14 @@ $main-height: auto;
         }
     }
 
-    &__text {
+    &__text-box {
         padding: 0px 20px 0px 15px;
         color: #FF6060;
+        background-color: #F6F6F6;
         overflow: hidden;
-        animation-duration: 3s;
-        animation-name: glissement;
+        transition: transform 1s;
+        transform-origin: 0% top;
+        transform: scaleY(1);
 
         @media (max-width: 767px) {
             font-size: 12px;
@@ -71,18 +72,8 @@ $main-height: auto;
             gap: 10px;
         }
 
-        &--open {
-            height: $main-height;
-        }
-
-        @keyframes glissement {
-            from {
-                height: 0;
-            }
-
-            to {
-                height: 4em;
-            }
+        &__text {
+            transform: scaleY(0);
         }
     }
 }

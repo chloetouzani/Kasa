@@ -10,7 +10,7 @@ function Collapse({CollapseTitle, CollapseText}) {
     const handleRotate = () => {
         setIsRotated(!isRotated);
         setIsOpen(!isOpen);
-      };
+    };
 
     return (
         <section className="collapse">
@@ -20,9 +20,13 @@ function Collapse({CollapseTitle, CollapseText}) {
                     <FontAwesomeIcon icon={faChevronUp}/> 
                 </div>
             </div>
-            {isOpen && 
-                (CollapseTitle === 'Equipements' ? <ul className='collapse__text'>{CollapseText.map((text) => (<li key={text}>{text}</li>))}</ul> : <p className="collapse__text collapse__text--open">{CollapseText}</p>)
-            }
+            <div className={`collapse__text-box ${isOpen ? 'collapse__text-box_open' : ''}`}>
+                {isOpen && 
+                    (CollapseTitle === 'Equipements' ? 
+                    <ul className='collapse__text'>{CollapseText.map((text) => (<li key={text}>{text}</li>))}</ul> 
+                    : <p>{CollapseText}</p>)
+                }
+            </div>
         </section>
     )
 }
