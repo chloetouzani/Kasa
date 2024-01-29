@@ -1,10 +1,11 @@
 import Header from "../../components/header"
 import Collapse from "../../components/collapse"
 import AboutImg from '../../assets/About-Header.png'
+import './style.scss'
 
 function About() {
     return (
-        <div>
+        <div className="about">
             <Header src={AboutImg} alt="Montagnes"/>
             <Collapse 
             CollapseTitle="Fiabilité" 

@@ -7,7 +7,7 @@ import House from './pages/housing';
 import Error from './pages/error';
 import NavBar from './components/navBar';
 import Footer from './components/footer';
-import './index.css';
+import './index.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

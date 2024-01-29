@@ -7,7 +7,7 @@ import "./style.scss"
 
 function Home() {
     return (
-        <div>
+        <div className="home">
             <Header src={HomeImg} alt="falaises en bord de mer" text="Chez vous, partout et ailleurs"/>
             <div className="cards-grid">
                 {Houses.map((house) => (

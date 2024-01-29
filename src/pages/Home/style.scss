@@ -1,6 +1,18 @@
-.cards-grid {
+.home {
+    max-width: 1240px;
     margin: auto;
-    width : 1240px;
+
+    @media (max-width: 1270px) {
+        margin: 19px;
+    }
+
+    @media (max-width: 767px) {
+    margin: 19px;
+    align-items: center;
+}
+}
+
+.cards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 50px;
@@ -9,5 +21,27 @@
     margin-top: 43px;
     box-sizing: border-box;
     border-radius: 25px;
-    background: #F6F6F6; 
+    background-color: #F6F6F6; 
+
+    @media (max-width: 1270px) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+        column-gap: 0;
+        justify-items: center;
+    }
+
+    @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        align-items: center;
+        margin: 0;
+    }
+
+    &  a {
+        @media (max-width: 1270px) {
+            width: 340px;
+            height: 340px;
+        }
+    }
 }

@@ -13,12 +13,12 @@ function House() {
         <main className="house">
             <Carousel Pictures={FoundHouse.pictures} alt={FoundHouse.title} />
 
-            <section className="house__infos">
-                <div>
+            <div className="house__infos">
+                <section>
                     <h1>{FoundHouse.title}</h1>
                     <p>{FoundHouse.location}</p>
                     <Tag TagText={FoundHouse.tags}/>
-                </div>
+                </section>
 
                 <div className="host-infos">
                 <figure>
@@ -27,7 +27,7 @@ function House() {
                 </figure>
                 <Stars rating={FoundHouse.rating}/>
                 </div>
-            </section>
+            </div>
 
             <div className="house__collapse">
                 <Collapse CollapseTitle="Description" CollapseText={FoundHouse.description}/>

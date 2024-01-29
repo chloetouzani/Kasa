@@ -12,6 +12,15 @@ $main-width: 340px;
     border-radius: 10px;
     position: relative;
 
+    @media (max-width: 1270px) {
+ 
+    }
+    
+    @media (max-width: 767px) {
+        width: 335px;
+        height: 255px; 
+    }
+
     &__img {
         height: $main-height;
         width: $main-width;

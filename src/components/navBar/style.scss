@@ -10,7 +10,25 @@ $main-color: #FF6060;
     display: flex;
     justify-content: space-between;
     margin: 45px auto 50px;
-    width: 1240px;;
+    width: 1240px;
+
+    @media (max-width: 1270px) {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 19px 0;
+        margin: 19px auto 0px;
+        box-sizing: border-box;
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 20px;
+        margin-bottom: 0px;
+        box-sizing: border-box;
+        padding: 19px;
+        align-items: center;
+    }
 
     &__list {
         display:flex;
@@ -18,10 +36,16 @@ $main-color: #FF6060;
         gap: 30px;
         @include navBartext;
 
+        @media (max-width: 767px) {
+            font-size: 12px;
+            text-transform: uppercase;
+            align-items: center;
+        }
+
         &__link {
-    color: $main-color;
-    text-decoration: none;
-    text-align: right;
+            color: $main-color;
+            text-decoration: none;
+            text-align: right;
     }           
         & a.active {
             text-decoration: underline;
