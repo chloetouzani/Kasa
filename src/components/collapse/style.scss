@@ -32,7 +32,7 @@ $main-height: auto;
             box-sizing: border-box;
             padding: 10px;
         }
-
+        
         & h2{
             margin: 0;
 
@@ -59,21 +59,46 @@ $main-height: auto;
         color: #FF6060;
         background-color: #F6F6F6;
         overflow: hidden;
-        transition: transform 1s;
-        transform-origin: 0% top;
-        transform: scaleY(1);
 
         @media (max-width: 767px) {
             font-size: 12px;
         }
         
+        &--open {
+            animation-name: collapse-open;
+            animation-duration: 0.5s;
+            display: flex;
+        }
+
+        &--close {
+            animation-name: collapse-close;
+            animation-duration: 0.5s;
+            transform: scale(0);
+        }
+
         & li {
             list-style-type:none;
             gap: 10px;
         }
 
-        &__text {
-            transform: scaleY(0);
+        @keyframes collapse-open {
+            0% {
+                transform-origin: 0% top;
+                transform: scaleY(0);
+            }
+            100% {
+                transform: scaleY(1);
+            }
+        }
+
+        @keyframes collapse-close {
+            0% {
+                transform: scaleY(1);
+            }
+            100% {
+                transform-origin: 0% top;
+                transform: scaleY(0);
+            }
         }
     }
 }

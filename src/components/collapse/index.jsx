@@ -13,19 +13,17 @@ function Collapse({CollapseTitle, CollapseText}) {
     };
 
     return (
-        <section className="collapse">
+        <section className='collapse'>
             <div className='collapse__title' onClick={handleRotate}>
                 <h2>{CollapseTitle}</h2>
                 <div  className={`collapse__icon ${isRotated ? 'collapse__icon--rotated' : ''}`}>
                     <FontAwesomeIcon icon={faChevronUp}/> 
                 </div>
             </div>
-            <div className={`collapse__text-box ${isOpen ? 'collapse__text-box_open' : ''}`}>
-                {isOpen && 
-                    (CollapseTitle === 'Equipements' ? 
-                    <ul className='collapse__text'>{CollapseText.map((text) => (<li key={text}>{text}</li>))}</ul> 
-                    : <p>{CollapseText}</p>)
-                }
+            <div className={`collapse__text-box ${isOpen ? 'collapse__text-box--open' : 'collapse__text-box--close'}`}>
+                    {(CollapseTitle === 'Equipements' ? 
+                    <ul>{CollapseText.map((text) => (<li key={text}>{text}</li>))}</ul> 
+                    : <p>{CollapseText}</p>)}
             </div>
         </section>
     )
