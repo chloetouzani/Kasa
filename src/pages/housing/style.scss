@@ -21,22 +21,9 @@
 .house {
     color: #FF6060;
     font-family: Montserrat;
-    margin: auto;
-    width: 1240px;
-
-    @media (max-width: 1200px) {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 19px;
-        margin: auto;
-    }
-
-    @media (max-width: 767px) {
-        width: 100%;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        }
+    max-width: 1440px;
+    padding: 19px;
+    box-sizing: border-box;
 
     &__infos {
         display: flex;
