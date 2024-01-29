@@ -1,29 +1,21 @@
 $main-height: 340px;
-$main-width: 340px;
 
 .Cards {
     display: flex;
     flex-direction: column;
     height: $main-height;
-    width: $main-width;
     margin: 0;
     object-fit: scale-down;
     overflow: hidden;
     border-radius: 10px;
     position: relative;
 
-    @media (max-width: 1270px) {
- 
-    }
-    
     @media (max-width: 767px) {
-        width: 335px;
         height: 255px; 
     }
 
     &__img {
-        height: $main-height;
-        width: $main-width;
+        height: 100%;
         object-fit: cover;
     }
 

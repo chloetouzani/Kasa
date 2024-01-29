@@ -1,40 +1,26 @@
 $main-color: #FF6060;
 
-@mixin navBartext {
-    color: $main-color;
-    font-family: 'Montserrat';
-    font-size: 24px; 
-}
-
 .nav {
     display: flex;
     justify-content: space-between;
     margin: 45px auto 50px;
-    width: 1240px;
-
-    @media (max-width: 1270px) {
-        width: 100%;
-        justify-content: space-between;
-        padding: 0 19px 0;
-        margin: 19px auto 0px;
-        box-sizing: border-box;
-    }
+    box-sizing: border-box;
+    padding: 19px;
+    width: 100%;
+    max-width: 1440px;
 
     @media (max-width: 767px) {
-        width: 100%;
-        justify-content: space-around;
         margin-top: 20px;
         margin-bottom: 0px;
-        box-sizing: border-box;
-        padding: 19px;
-        align-items: center;
     }
 
     &__list {
         display:flex;
-        list-style: none;
+        align-items: center;
         gap: 30px;
-        @include navBartext;
+        color: $main-color;
+        font-family: 'Montserrat';
+        font-size: 24px; 
 
         @media (max-width: 767px) {
             font-size: 12px;

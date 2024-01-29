@@ -7,7 +7,7 @@ $main-height: auto;
     margin-bottom: 15px;
     margin-top:30px;
 
-    @media (max-width: 1270px) {
+    @media (max-width: 1200px) {
         width: 100%;
     }
 
@@ -36,7 +36,7 @@ $main-height: auto;
         & h2{
             margin: 0;
 
-            @media (max-width: 1270px) {
+            @media (max-width: 1200px) {
                 font-size: 20px;
             }
 
