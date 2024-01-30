@@ -22,8 +22,8 @@ function Collapse({CollapseTitle, CollapseText}) {
             </div>
             <div className={`collapse__text-box ${isOpen ? 'collapse__text-box--open' : 'collapse__text-box--close'}`}>
                     {(CollapseTitle === 'Equipements' ? 
-                    <ul>{CollapseText.map((text) => (<li key={text}>{text}</li>))}</ul> 
-                    : <p>{CollapseText}</p>)}
+                    <ul className={`${isOpen ? '' : 'display-none'}`}>{CollapseText.map((text) => (<li key={text}>{text}</li>))}</ul> 
+                    : <p className={`${isOpen ? '' : 'display-none'}`}>{CollapseText}</p>)}
             </div>
         </section>
     )

@@ -1,22 +1,14 @@
 .home {
     max-width: 1440px;
     margin: auto;
-
-    @media (max-width: 1200px) {
-        margin: 19px;
-    }
-
-    @media (max-width: 767px) {
-    margin: 19px;
-    align-items: center;
-}
+    padding: 19px;
+    box-sizing: border-box;
 }
 
 .cards-grid {
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 100%;
-    // grid-template-columns: repeat(3, 1fr);
     row-gap: 50px;
     column-gap: 60px;
     padding : 56px 50px 43px;
@@ -31,13 +23,6 @@
         padding: 0;
     }
 
-    &  a {
-        @media (max-width: 1200px) {
-            width: 340px;
-            height: 340px;
-        }
-    }
-
     & li {
         width: calc((100% - 150px) / 3);
     
@@ -49,5 +34,4 @@
             width: 100%;
         }
     }
-
 }

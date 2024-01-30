@@ -1,11 +1,13 @@
-$main-height: auto;
-
 .collapse {
     margin: auto;
     font-family: "Montserrat";
     width: 1023px;
+    height: auto;
     margin-bottom: 15px;
     margin-top:30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 
     @media (max-width: 1200px) {
         width: 100%;
@@ -26,6 +28,7 @@ $main-height: auto;
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
+        z-index: 1;
 
         @media (max-width: 767px) {
             height: 30px;
@@ -50,7 +53,7 @@ $main-height: auto;
         transition: transform 0.4s;
 
         &--rotated {
-            transform: rotate(180deg);
+            transform: rotate(-180deg);
         }
     }
 
@@ -59,46 +62,31 @@ $main-height: auto;
         color: #FF6060;
         background-color: #F6F6F6;
         overflow: hidden;
+        transition: translate 0.5s;
+        z-index: 0;
 
         @media (max-width: 767px) {
             font-size: 12px;
         }
         
         &--open {
-            animation-name: collapse-open;
-            animation-duration: 0.5s;
-            display: flex;
+            translate: 0px 0px;
         }
 
         &--close {
-            animation-name: collapse-close;
-            animation-duration: 0.5s;
-            transform: scale(0);
+            translate: 0px -110px;
         }
 
+        & ul {
+            padding: 16px 0 16px;
+            box-sizing: border-box;
+        }
         & li {
-            list-style-type:none;
             gap: 10px;
         }
-
-        @keyframes collapse-open {
-            0% {
-                transform-origin: 0% top;
-                transform: scaleY(0);
-            }
-            100% {
-                transform: scaleY(1);
-            }
-        }
-
-        @keyframes collapse-close {
-            0% {
-                transform: scaleY(1);
-            }
-            100% {
-                transform-origin: 0% top;
-                transform: scaleY(0);
-            }
-        }
     }
+}
+
+.display-none {
+    display: none;
 }
