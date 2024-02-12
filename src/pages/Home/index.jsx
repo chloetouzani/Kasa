@@ -11,8 +11,8 @@ function Home() {
             <Header src={HomeImg} alt="falaises en bord de mer" text="Chez vous, partout et ailleurs"/>
             <ul className="cards-grid">
                 {Houses.map((house) => (
-                    <li>
-                        <Link to={'/house/' + house.id} key={house.id}>
+                    <li key={house.id}>
+                        <Link to={'/house/' + house.id}>
                             <Card 
                                 title={house.title} 
                                 cover={house.cover}

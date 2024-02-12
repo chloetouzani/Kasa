@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import Carousel from "../../components/carousel"
 import Houses from "../../datas/logements"
+import Error from "../error"
 import "./style.scss"
 import Collapse from "../../components/collapse"
 import Tag from "../../components/tag"
@@ -9,6 +10,9 @@ import Stars from "../../components/stars"
 function House() {
     const {id} = useParams()
     const FoundHouse = Houses.filter(OkId => OkId.id === id)[0];
+    if (FoundHouse === undefined) {
+        return <Error/>
+    }
     return (
         <main className="house">
             <Carousel Pictures={FoundHouse.pictures} alt={FoundHouse.title} />
